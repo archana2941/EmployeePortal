@@ -14,18 +14,17 @@ class DashboardContainer extends Component {
         this.props.dispatch(DashboardActions.getEmployeeData());
     }
     onSignIn = () => {
-        console.log('press')
         NavigationService.navigate(Dashboard);
     }
     render() {
         if(this.props.dashboard.isLoading){
             return (
                 <ActivityIndicator/>
-            )
+            );
         }
         return (
             <Dashboard
-                employeeData={this.props.dashboard.employeeData}
+                employeesData={this.props.dashboard.employeesData}
             />
         )
     }

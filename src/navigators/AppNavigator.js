@@ -3,7 +3,7 @@ import LoginContainer from '../screens/Login/LoginContainer';
 import DashboardContainer from '../screens/Dashboard/DashboardContainer';
 
 const AppNavigator = createStackNavigator({
-    Login: LoginContainer,
+    Login: {screen: LoginContainer,navigationOptions: { header: null }},
     Dashboard: DashboardContainer,
 },{
     initialRouteName: 'Login'
